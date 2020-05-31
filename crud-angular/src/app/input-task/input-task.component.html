@@ -1,0 +1,25 @@
+<div class="column is-6 is-offset-3">
+    <div class="card">
+        <form class="has-margin-25" (ngSubmit)="addTaskToState($event)">
+            <div class="field">
+                <label class="label" for="item">Tarea:</label>
+                <input [(ngModel)]="tarea.name" [ngModelOptions]="{standalone:true}" class="input is-primary" id="item" type="text" required>
+            </div>
+            <div class="field">
+                <label class="label" for="hours">duration:</label>
+                <input [(ngModel)]="tarea.hours" [ngModelOptions]="{standalone:true}" class="input is-primary" id="hours" type="number" required>
+            </div>
+            <div class="field">
+                <label class="label">Estado:</label>
+                <input [(ngModel)]="tarea.completed" [ngModelOptions]="{standalone:true}" type="radio" name="finalizado" class="radio" [value]="true"><span class="has-text-white has-margin-3">Finalizado</span> <br>
+                <input [(ngModel)]="tarea.completed" [ngModelOptions]="{standalone:true}" type="radio" name="por-hacer" class="radio" [value]="false"><span class="has-text-white has-margin-3">Por hacer</span>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <button class="button is-warning has-margin-bottom-4" type="submit">Add</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>

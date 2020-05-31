@@ -1,0 +1,6 @@
+<div class="content">
+  <h4 class="title is-4">Lista de tareas</h4>
+  <div *ngIf="tareas$ | async as tareas">
+    <app-task *ngFor="let tarea of tareas" [tarea]="tarea"></app-task>
+  </div>
+</div>
